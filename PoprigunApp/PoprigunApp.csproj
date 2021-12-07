@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00A29764-BD02-472F-B6FD-66505EE0FCD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PoprigunApp</RootNamespace>
+    <AssemblyName>PoprigunApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditForm.Designer.cs">
+      <DependentUpon>AddEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgentUserCntrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AgentUserCntrl.Designer.cs">
+      <DependentUpon>AgentUserCntrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelEF\Agent.cs" />
+    <Compile Include="ModelEF\AgentType.cs" />
+    <Compile Include="ModelEF\DBModel.cs" />
+    <Compile Include="ModelEF\ProductSale.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddEditForm.resx">
+      <DependentUpon>AddEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgentUserCntrl.resx">
+      <DependentUpon>AgentUserCntrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\PoprigunApp.ModelEF.Agent.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Res\agent_1.png" />
+    <Content Include="Res\agent_10.png" />
+    <Content Include="Res\agent_100.png" />
+    <Content Include="Res\agent_101.png" />
+    <Content Include="Res\agent_102.png" />
+    <Content Include="Res\agent_103.png" />
+    <Content Include="Res\agent_104.png" />
+    <Content Include="Res\agent_105.png" />
+    <Content Include="Res\agent_106.png" />
+    <Content Include="Res\agent_107.png" />
+    <Content Include="Res\agent_108.png" />
+    <Content Include="Res\agent_109.png" />
+    <Content Include="Res\agent_11.png" />
+    <Content Include="Res\agent_110.png" />
+    <Content Include="Res\agent_111.png" />
+    <Content Include="Res\agent_112.png" />
+    <Content Include="Res\agent_113.png" />
+    <Content Include="Res\agent_114.png" />
+    <Content Include="Res\agent_115.png" />
+    <Content Include="Res\agent_116.png" />
+    <Content Include="Res\agent_117.png" />
+    <Content Include="Res\agent_118.png" />
+    <Content Include="Res\agent_119.png" />
+    <Content Include="Res\agent_12.png" />
+    <Content Include="Res\agent_120.png" />
+    <Content Include="Res\agent_121.png" />
+    <Content Include="Res\agent_122.png" />
+    <Content Include="Res\agent_123.png" />
+    <Content Include="Res\agent_124.png" />
+    <Content Include="Res\agent_125.png" />
+    <Content Include="Res\agent_126.png" />
+    <Content Include="Res\agent_127.png" />
+    <Content Include="Res\agent_128.png" />
+    <Content Include="Res\agent_129.png" />
+    <Content Include="Res\agent_13.png" />
+    <Content Include="Res\agent_130.png" />
+    <Content Include="Res\agent_14.png" />
+    <Content Include="Res\agent_15.png" />
+    <Content Include="Res\agent_16.png" />
+    <Content Include="Res\agent_17.png" />
+    <Content Include="Res\agent_18.png" />
+    <Content Include="Res\agent_19.png" />
+    <Content Include="Res\agent_2.png" />
+    <Content Include="Res\agent_20.png" />
+    <Content Include="Res\agent_21.png" />
+    <Content Include="Res\agent_22.png" />
+    <Content Include="Res\agent_23.png" />
+    <Content Include="Res\agent_24.png" />
+    <Content Include="Res\agent_25.png" />
+    <Content Include="Res\agent_26.png" />
+    <Content Include="Res\agent_27.png" />
+    <Content Include="Res\agent_28.png" />
+    <Content Include="Res\agent_29.png" />
+    <Content Include="Res\agent_3.png" />
+    <Content Include="Res\agent_30.png" />
+    <Content Include="Res\agent_31.png" />
+    <Content Include="Res\agent_32.png" />
+    <Content Include="Res\agent_33.png" />
+    <Content Include="Res\agent_34.png" />
+    <Content Include="Res\agent_35.png" />
+    <Content Include="Res\agent_36.png" />
+    <Content Include="Res\agent_37.png" />
+    <Content Include="Res\agent_38.png" />
+    <Content Include="Res\agent_39.png" />
+    <Content Include="Res\agent_4.png" />
+    <Content Include="Res\agent_40.png" />
+    <Content Include="Res\agent_41.png" />
+    <Content Include="Res\agent_42.png" />
+    <Content Include="Res\agent_43.png" />
+    <Content Include="Res\agent_44.png" />
+    <Content Include="Res\agent_45.png" />
+    <Content Include="Res\agent_46.png" />
+    <Content Include="Res\agent_47.png" />
+    <Content Include="Res\agent_48.png" />
+    <Content Include="Res\agent_49.png" />
+    <Content Include="Res\agent_5.png" />
+    <Content Include="Res\agent_50.png" />
+    <Content Include="Res\agent_51.png" />
+    <Content Include="Res\agent_52.png" />
+    <Content Include="Res\agent_53.png" />
+    <Content Include="Res\agent_54.png" />
+    <Content Include="Res\agent_55.png" />
+    <Content Include="Res\agent_56.png" />
+    <Content Include="Res\agent_57.png" />
+    <Content Include="Res\agent_58.png" />
+    <Content Include="Res\agent_59.png" />
+    <Content Include="Res\agent_6.png" />
+    <Content Include="Res\agent_60.png" />
+    <Content Include="Res\agent_61.png" />
+    <Content Include="Res\agent_62.png" />
+    <Content Include="Res\agent_63.png" />
+    <Content Include="Res\agent_64.png" />
+    <Content Include="Res\agent_65.png" />
+    <Content Include="Res\agent_66.png" />
+    <Content Include="Res\agent_67.png" />
+    <Content Include="Res\agent_68.png" />
+    <Content Include="Res\agent_69.png" />
+    <Content Include="Res\agent_7.png" />
+    <Content Include="Res\agent_70.png" />
+    <Content Include="Res\agent_71.png" />
+    <Content Include="Res\agent_72.png" />
+    <Content Include="Res\agent_73.png" />
+    <Content Include="Res\agent_74.png" />
+    <Content Include="Res\agent_75.png" />
+    <Content Include="Res\agent_76.png" />
+    <Content Include="Res\agent_77.png" />
+    <Content Include="Res\agent_78.png" />
+    <Content Include="Res\agent_79.png" />
+    <Content Include="Res\agent_8.png" />
+    <Content Include="Res\agent_80.png" />
+    <Content Include="Res\agent_81.png" />
+    <Content Include="Res\agent_82.png" />
+    <Content Include="Res\agent_83.png" />
+    <Content Include="Res\agent_84.png" />
+    <Content Include="Res\agent_85.png" />
+    <Content Include="Res\agent_86.png" />
+    <Content Include="Res\agent_87.png" />
+    <Content Include="Res\agent_88.png" />
+    <Content Include="Res\agent_89.png" />
+    <Content Include="Res\agent_9.png" />
+    <Content Include="Res\agent_90.png" />
+    <Content Include="Res\agent_91.png" />
+    <Content Include="Res\agent_92.png" />
+    <Content Include="Res\agent_93.png" />
+    <Content Include="Res\agent_94.png" />
+    <Content Include="Res\agent_95.png" />
+    <Content Include="Res\agent_96.png" />
+    <Content Include="Res\agent_97.png" />
+    <Content Include="Res\agent_98.png" />
+    <Content Include="Res\agent_99.png" />
+    <Content Include="Res\picture.png" />
+    <Content Include="Res\Попрыженок.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
